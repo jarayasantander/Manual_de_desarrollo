@@ -1,0 +1,194 @@
+I"�\<p>La codificación geográfica es el proceso de convertir direcciones (como “Beauchef 850, Santiago”) en coordenadas geográficas (como latitud-33.4577 y longitud-70.6636), que se puede usar para colocar marcadores en un mapa o posicionar el mapa.</p>
+
+<p>Geocoding funciona como una request api tipo GET usando la siguiente forma:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://maps.googleapis.com/maps/api/geocode/outputFormat?parameters
+</code></pre></div></div>
+
+<p>donde el output format debe puede ser json o xml.</p>
+
+<p>Para el caso de buscar la facultad, la variable parameters debiese ser:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>address=850+Beauchef,+Santiago,+Chile
+</code></pre></div></div>
+
+<p>donde el resultado viene dado  por :</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+   <span class="dl">"</span><span class="s2">results</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+           <span class="dl">"</span><span class="s2">address_components</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+               <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">long_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">850</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">short_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">850</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="dl">"</span><span class="s2">street_number</span><span class="dl">"</span>
+                   <span class="p">]</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">long_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Beauchef</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">short_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Beauchef</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="dl">"</span><span class="s2">route</span><span class="dl">"</span>
+                   <span class="p">]</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">long_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Santiago</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">short_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Santiago</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="dl">"</span><span class="s2">locality</span><span class="dl">"</span><span class="p">,</span>
+                       <span class="dl">"</span><span class="s2">political</span><span class="dl">"</span>
+                   <span class="p">]</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">long_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Santiago</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">short_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Santiago</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="dl">"</span><span class="s2">administrative_area_level_3</span><span class="dl">"</span><span class="p">,</span>
+                       <span class="dl">"</span><span class="s2">political</span><span class="dl">"</span>
+                   <span class="p">]</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">long_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Santiago</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">short_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Santiago</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="dl">"</span><span class="s2">administrative_area_level_2</span><span class="dl">"</span><span class="p">,</span>
+                       <span class="dl">"</span><span class="s2">political</span><span class="dl">"</span>
+                   <span class="p">]</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">long_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Región Metropolitana</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">short_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Región Metropolitana</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="dl">"</span><span class="s2">administrative_area_level_1</span><span class="dl">"</span><span class="p">,</span>
+                       <span class="dl">"</span><span class="s2">political</span><span class="dl">"</span>
+                   <span class="p">]</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">long_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Chile</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">short_name</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">CL</span><span class="dl">"</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+                       <span class="dl">"</span><span class="s2">country</span><span class="dl">"</span><span class="p">,</span>
+                       <span class="dl">"</span><span class="s2">political</span><span class="dl">"</span>
+                   <span class="p">]</span>
+               <span class="p">}</span>
+           <span class="p">],</span>
+           <span class="dl">"</span><span class="s2">formatted_address</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Beauchef 850, Santiago, Región Metropolitana, Chile</span><span class="dl">"</span><span class="p">,</span>
+           <span class="dl">"</span><span class="s2">geometry</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+               <span class="dl">"</span><span class="s2">location</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">lat</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">33.4575249</span><span class="p">,</span>
+                   <span class="dl">"</span><span class="s2">lng</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">70.6622022</span>
+               <span class="p">},</span>
+               <span class="dl">"</span><span class="s2">location_type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ROOFTOP</span><span class="dl">"</span><span class="p">,</span>
+               <span class="dl">"</span><span class="s2">viewport</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="dl">"</span><span class="s2">northeast</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+                       <span class="dl">"</span><span class="s2">lat</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">33.4561759197085</span><span class="p">,</span>
+                       <span class="dl">"</span><span class="s2">lng</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">70.66085321970849</span>
+                   <span class="p">},</span>
+                   <span class="dl">"</span><span class="s2">southwest</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+                       <span class="dl">"</span><span class="s2">lat</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">33.4588738802915</span><span class="p">,</span>
+                       <span class="dl">"</span><span class="s2">lng</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">70.66355118029151</span>
+                   <span class="p">}</span>
+               <span class="p">}</span>
+           <span class="p">},</span>
+           <span class="dl">"</span><span class="s2">place_id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ChIJA6jyZQPFYpYRI7VZmK3t3x0</span><span class="dl">"</span><span class="p">,</span>
+           <span class="dl">"</span><span class="s2">plus_code</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+               <span class="dl">"</span><span class="s2">compound_code</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">G8RQ+X4 Santiago, Chile</span><span class="dl">"</span><span class="p">,</span>
+               <span class="dl">"</span><span class="s2">global_code</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">47RFG8RQ+X4</span><span class="dl">"</span>
+           <span class="p">},</span>
+           <span class="dl">"</span><span class="s2">types</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+               <span class="dl">"</span><span class="s2">establishment</span><span class="dl">"</span><span class="p">,</span>
+               <span class="dl">"</span><span class="s2">point_of_interest</span><span class="dl">"</span>
+           <span class="p">]</span>
+       <span class="p">}</span>
+   <span class="p">],</span>
+   <span class="dl">"</span><span class="s2">status</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span>
+<span class="p">}</span>
+
+</code></pre></div></div>
+<p>Para implementarlo en maps javascript , se debe crear un buscador dentro del mapa que se pueda escribir un input como dirección para que se vea mas o menos asi:</p>
+
+<!-- foto -->
+<figure><img class="docimage" src="images/Geocoding.png" alt="Jekyll" /><figcaption>Visualizacion para los usuaries</figcaption></figure>
+
+<p>Debe de ser intuitivo para el usuario buscar una dirección. Para implementarlo en el mapa se debe inicializar la función geocoder e iterar sobre objetos como InputText, submitButton y clear button. En esta parte solo se inicializa, no se escoge en qué parte aparecerán.</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">geocoder</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">Geocoder</span><span class="p">();</span>
+
+<span class="nx">inputText</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="p">;</span>
+ <span class="nx">inputText</span><span class="p">.</span><span class="nx">placeholder</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Enter a location</span><span class="dl">"</span><span class="p">;</span>
+ 
+ <span class="kd">const</span> <span class="nx">submitButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">input</span><span class="dl">"</span><span class="p">);</span>
+ 
+ <span class="nx">submitButton</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">button</span><span class="dl">"</span><span class="p">;</span>
+ <span class="nx">submitButton</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Buscar</span><span class="dl">"</span><span class="p">;</span>
+ <span class="nx">submitButton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">button</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">button-primary</span><span class="dl">"</span><span class="p">);</span>
+ 
+ <span class="kd">const</span> <span class="nx">clearButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">input</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">inputText</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">text</span><span class="dl">"</span><span class="p">;</span>
+ <span class="nx">inputText</span><span class="p">.</span><span class="nx">placeholder</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Enter a location</span><span class="dl">"</span><span class="p">;</span>
+ 
+ <span class="kd">const</span> <span class="nx">submitButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">input</span><span class="dl">"</span><span class="p">);</span>
+ 
+ <span class="nx">submitButton</span><span class="p">.</span><span class="nx">type</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">button</span><span class="dl">"</span><span class="p">;</span>
+ <span class="nx">submitButton</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">Buscar</span><span class="dl">"</span><span class="p">;</span>
+ <span class="nx">submitButton</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="dl">"</span><span class="s2">button</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">button-primary</span><span class="dl">"</span><span class="p">);</span>
+ 
+ <span class="kd">const</span> <span class="nx">clearButton</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="dl">"</span><span class="s2">input</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Luego se crea la función geocode que tendrá como objetivo realizar la api request para conseguir las coordenadas de la dirección ingresada.</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">unction</span> <span class="nx">geocode</span><span class="p">(</span><span class="nx">request</span><span class="p">:</span> <span class="nx">google</span><span class="p">.</span><span class="nx">maps</span><span class="p">.</span><span class="nx">GeocoderRequest</span><span class="p">):</span> <span class="k">void</span> <span class="p">{</span>
+ <span class="nx">clear</span><span class="p">();</span>
+ 
+ <span class="nx">geocoder</span>
+   <span class="p">.</span><span class="nx">geocode</span><span class="p">(</span><span class="nx">request</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">((</span><span class="nx">result</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="kd">const</span> <span class="p">{</span> <span class="nx">results</span> <span class="p">}</span> <span class="o">=</span> <span class="nx">result</span><span class="p">;</span>
+ 
+     <span class="nx">map</span><span class="p">.</span><span class="nx">setCenter</span><span class="p">(</span><span class="nx">results</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">location</span><span class="p">);</span>
+     <span class="nx">marker</span><span class="p">.</span><span class="nx">setPosition</span><span class="p">(</span><span class="nx">results</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">location</span><span class="p">);</span>
+     <span class="nx">marker</span><span class="p">.</span><span class="nx">setMap</span><span class="p">(</span><span class="nx">map</span><span class="p">);</span>
+     <span class="nx">responseDiv</span><span class="p">.</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">block</span><span class="dl">"</span><span class="p">;</span>
+     <span class="nx">response</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">results</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">geometry</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">lat</span><span class="p">(),</span> <span class="kc">null</span><span class="p">,</span> <span class="mi">2</span><span class="p">);</span>
+<span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">((</span><span class="nx">e</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">alert</span><span class="p">(</span><span class="dl">"</span><span class="s2">Geocode was not successful for the following reason: </span><span class="dl">"</span> <span class="o">+</span> <span class="nx">e</span><span class="p">);</span>
+   <span class="p">});</span>
+
+</code></pre></div></div>
+
+<p>Con estas líneas, se busca la dirección, se centra el mapa en donde se encuentra la dirección y se imprime lo que devuelve la API.</p>
+
+<!-- In previous versions of the theme, I built the theme to generate different outputs for different scenarios based on various filtering attributes that might include product, version, platform, and audience variants.
+
+However, this model results in siloed outputs and lots of separate file directories to manage. Instead of having 30 separate sites for your content (or however many variants you might have been producing), in this version of the theme I've moved towards a strategy of having one site with multiple products.
+
+For each product, you can associate a unique sidebar with each of the product's pages. This allows you to have all your documentation on one site, but with separate navigation that is tailored to a view of that product.
+
+You can still output to both web and PDF. And if you really need multiple site outputs, you can still do so by using multiple configuration files that trigger different builds. But my conclusion after using the multiple site output model for some years is that it's a bad practice for tech comm.
+
+## Permalinks
+
+With this theme, since you'll be publishing to one site, I've implement permalinks instead of relative links. Using permalinks means the way you store pages is much more flexible. You can store topics in folders and subfolders, etc., to any degree. But note that with permalinks you can't view the content offline (outside of Jekyll's preview server) nor on a separate site other than the one specified in the configuration file. Permalinks are how Jekyll was designed to work, and the sites just work better that way.
+
+## Kramdown and Rouge
+
+I also switched from redcarpet and Pygments to Kramdown and Rouge to align with the current direction of Jekyll 3.0. Kramdown is a Markdown filter (it's slightly different from Github-flavored Markdown). Rouge is a syntax highlighter. Pygments had some dependencies on Python, which made it more cumbersome for Windows users.
+
+## Blog feature
+
+I included a blog feature with this version of the theme. You can write posts and view them through the News link. There's also an archive for blog posts that sorts posts by year.
+
+Additionally, the tagging system works across both the blog and pages, so your tags allow users to move laterally across the site based on topics they're interested in. When you view a tag archive, the sidebar shows a list of tags.
+
+## Updated documentation
+
+I updated the documentation for  the theme. The switch from the multi-site outputs to the single-site with multiple sidebars required updating a lot of different parts of the documentation and code.
+
+## Fixed errors
+
+Previously I had some errors with the HTML that showed up in w3c HTML validator analyses. This caused some small problems in certain browsers or systems less tolerant of the errors. I fixed all of the errors.
+
+## Accessing the old theme
+
+If you want to access the old theme, you can still find it [here](https://github.com/tomjoht/jekylldoctheme-separate-outputs). -->
+
+:ET

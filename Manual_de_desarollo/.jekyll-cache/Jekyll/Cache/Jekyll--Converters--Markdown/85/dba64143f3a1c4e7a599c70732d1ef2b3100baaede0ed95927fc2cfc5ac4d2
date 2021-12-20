@@ -1,0 +1,29 @@
+I"P<h2 id="introducción">Introducción</h2>
+<p>Biciruta basa su muestra en una plataforma digital. Todo el trabajo recae sobre servicios onlines con la idea que el usuario pueda interactuar de una manera amigable. Se decide en definitiva hacer una página web con interfaz similar a lo que podría ser maps de google.</p>
+
+<p>Para adentrarse en los tópicos hay que comenzar de la base que se quiere tener una interfaz de fácil uso pero una estructuración georeferenciado. Es decir, se busca tener un mapa pero también un “background” con coordenadas. Es decir cada lugar del mapa corresponde a una tupla : coord=(latitud, longitud). Todo tipo de dirección, ruta, cálculo de ruta tendrá una o múltiples tuplas asociadas.</p>
+
+<h2 id="herramientas-principales">Herramientas principales</h2>
+
+<p>Para la realización del prototipo Bici Ruta desde un punto de vista técnico, se utiliza y junta diferentes herramientas tecnológicas. El punto fuerte de la solución propuesta es cómo se relacionan estos puntos y que valor se le puede agregar a la idea. Los elementos utilizados son :</p>
+
+<ul>
+  <li>Maps Javascriopt API.</li>
+  <li>Geocoding API.</li>
+  <li>Shapes.</li>
+  <li>TomTom API.</li>
+  <li>Bases de datos relacionales.</li>
+</ul>
+
+<p>Cada punto se conecta con los anteriores creando una estructura diversa en contenido. En las próximas secciones se irán entrando en detalle el funcionamiento. Cabe destacar que tanto para Google Cloud Platform, Tomtom api y mysql se debió crear cuentas para la utilización de etas mismas.</p>
+
+<p>Para la realización del trabajo se utilizó:</p>
+
+<ul>
+  <li>VS Studio, para editar y compilar texto al igual que tener interacción con la terminal.</li>
+  <li>Postman, aplicación para testear request de APIs.</li>
+  <li>git, para clonar repositorios.</li>
+  <li>MYSQL, para creación de base de datos.</li>
+</ul>
+
+:ET
