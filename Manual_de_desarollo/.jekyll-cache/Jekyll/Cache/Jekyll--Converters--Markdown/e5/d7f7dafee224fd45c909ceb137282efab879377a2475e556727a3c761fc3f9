@@ -1,0 +1,24 @@
+I"9<ul>
+  <li><a href="https://developers.google.com/maps/documentation/javascript/overview">Maps Javascript API</a></li>
+  <li><a href="https://developers.google.com/maps/documentation/geocoding/overview#place-id">Geocoding API</a></li>
+  <li><a href="https://developers.google.com/maps/documentation/javascript/shapes?hl=es-419">Shapes</a></li>
+  <li><a href="https://developer.tomtom.com/content/routing-api-explorer#/Routing/get_routing__versionNumber__calculateRoute__locations___contentType_">TomTom API</a></li>
+  <li><a href="https://extract.bbbike.org/">Extract bike</a></li>
+  <li><a href="https://vercel.com/">Verce</a>
+<!-- ## Creating tooltips -->
+<!-- Because this theme is built on Bootstrap, you can simply use a specific attribute on an element to insert a tooltip. --></li>
+</ul>
+
+<!-- Suppose you have a glossary.yml file inside your \_data folder. You could pull in that glossary definition like this: -->
+
+<!-- 
+```html
+<a href="#" data-toggle="tooltip" data-original-title="{{site.data.glossary.jekyll_platform}}">Jekyll</a> is my favorite tool for building websites.
+``` -->
+<!-- 
+
+This renders to the following:
+
+<a href="#" data-toggle="tooltip" data-original-title="Jekyll is a static site generator that builds sites using most modern web technologies.">Jekyll</a> is my favorite tool for building websites. -->
+
+:ET

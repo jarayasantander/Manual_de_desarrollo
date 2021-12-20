@@ -1,31 +1,12 @@
----
-title: Conexión
-# tags: [getting_started]
-# last_updated: July 3, 2016
-# keywords: sidebar, accordion, yaml, iteration, for loop, navigation, attributes, conditional filtering
-# summary: "The sidebar navigation uses a jQuery component called Navgoco. The sidebar is a somewhat complex part of the theme that remembers your current page, highlights the active item, stays in a fixed position on the page, and more. This page explains a bit about how the sidebar was put together."
-sidebar: mydoc_sidebar
-permalink: mydoc_sidebar_navigation.html
-folder: mydoc
----
+I"5<p>El proyecto se está armando en Node.js Las apis de google están integradas en node además de ser una plataforma diseñada para utilizar requests.</p>
 
-
-El proyecto se está armando en Node.js Las apis de google están integradas en node además de ser una plataforma diseñada para utilizar requests. 
-
-
-La conexión del sistema completo es el siguiente:
+<p>La conexión del sistema completo es el siguiente:</p>
 
 <!-- foto -->
 
-{% include image.html file="Conexión.png"  alt="Jekyll" caption="Esquema de Conexión local" max-width="10000" %}
+<figure><img class="docimage" src="images/Conexión.png" alt="Jekyll" style="max-width: 600px" /><figcaption>Esquema de Conexión</figcaption></figure>
 
-Se encuentra todo dentro del mismo repositorio git. Ese repositorio / proyecto junta todo lo mencionado en secciones anteriores para el levantamiento del servicio en el local.
-
-Para poder hacerla accesible a internet, se tiene que correr el framework nodejs en un ambiente disponible en linea con request https. Para eso se decidió utilizar el servicio Vercel [Vercel](https://vercel.com/) donde te ayudan a levantar de manera sencilla un servidor. 
-
-{% include image.html file="Conexion2.png"  alt="Jekyll" caption="Esquema de Conexión servidor" max-width="10000" %}
-
-De esta forma se trabaja en el repositorio git. Se configura el ambiente de nodejs en vercel para anclarlo al repositorio git. De esta forma vercel estará completamente anexado a los scripts de git para poder actualizarse de manera automática. Vercel también alberga esta misma página de desarrollo para hacerla accesible a internet.
+<p>El ambiente se en una primera instancia en heroku que permite un  amigable entorno de ambiente para páginas sencillas.</p>
 
 <!-- ## Navgoco foundation -->
 
@@ -61,12 +42,12 @@ There's a danger with setting the accordion to `false`. If you click Expand All 
 
 For example, the sidebar.html file contains the following code:
 
-{% raw %}
+
 ```liquid
 {% if folderitem.external_url %}
     <li><a href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
 ```
-{% endraw %}
+
 
 You can see that the `external_url` is a condition that applies a different formatting. Although this feature is available, I recommend putting any external navigation links in the top navigation bar instead of the side navigation bar. -->
 
@@ -76,16 +57,16 @@ You can see that the `external_url` is a condition that applies a different form
 
 For example, the sidebar.html file contains the following code:
 
-{% raw %}
+
 ```liquid
 {% elsif page.url == folderitem.url %}
    <li class="active"><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
 ```
-{% endraw %}
+
 
 If the `page.url` matches the `subfolderitem.url`, then an `active` class gets applied. If not, the `active` class does not get applied.
 
-The `page.url` in Jekyll is a site-wide variable. If you insert {% raw %}`{{page.url}}`{% endraw %} on a page, it will render as follows: {{page.url}}. The `url` attribute in the sidebar item must match the page URL in order to get the `active` class applied.
+The `page.url` in Jekyll is a site-wide variable. If you insert `{{page.url}}` on a page, it will render as follows: /mydoc_sidebar_navigation.html. The `url` attribute in the sidebar item must match the page URL in order to get the `active` class applied.
 
 This is why the `url` value in the sidebar data file looks something like this:
 
@@ -99,4 +80,4 @@ Note that the url does not include the project folder where the file is stored. 
 
 Now the page.url and the item.url can match and the `active` class can get applied. With the `active` class applied, the sidebar section remains open. -->
 
-{% include links.html %}
+:ET

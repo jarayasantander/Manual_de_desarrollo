@@ -1,25 +1,21 @@
----
-title: "Documentación BiciRuta"
-# keywords: sample homepage
-# tags: [getting_started]
-sidebar: mydoc_sidebar
-permalink: index.html
-# summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
----
+I"]L<!-- <div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://tinyletter.com/tomjoht'>subscribing</a>. I also have a site on <a href='http://idratherbewriting.com/learnapidoc'>writing API documentation</a>.</div>
 
-<!-- {% include note.html content="If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://tinyletter.com/tomjoht'>subscribing</a>. I also have a site on <a href='http://idratherbewriting.com/learnapidoc'>writing API documentation</a>." %} -->
-## Introducción
-Bienvenidos a Bici Ruta. Como equipo estamos comprometidos por la seguridad de todos los ciclistas con los que compartimos calle. Es por eso que creemos en  poder utilizar tecnología apuntando hacia el bienestar vial.
 
-Proponemos BiciRuta, pagina web que se basa en APIs de googles para calcular rutas seguras enfocadas en bicicleta. Hoy no existe plataforma que se ponga en la situación del ciclista latinoamericano y la realidad que sucede en las calles. 
+ -->
+<h2 id="biciruta">BiciRuta</h2>
+<p>Bienvenidos a Bici Ruta. Como equipo estamos comprometidos por la seguridad de todos los ciclistas con los que compartimos calle. Es por eso que creemos en  poder utilizar tecnología apuntando hacia el bienestar vial.</p>
 
-El primer prototipo se encuentra en: [BiciRuta](https://biciruta-vercel.vercel.app/)
+<p>Proponemos BiciRuta, pagina web que se basa en APIs de googles para calcular rutas seguras enfocadas en bicicleta. Hoy no existe plataforma que se ponga en la situación del ciclista latinoamericano y la realidad que sucede en las calles.</p>
 
-En esta documentación llamada manual de desarrollo, están todos los hitos importantes para el levantamiento de la plataforma. Se comienza con herramientas utilizadas donde se mencionan todas los instrumentos necesarios para el funcionamiento de la página. Esta es la visión completa. 
+<p>El primer prototipo se encuentra en: <a href="https://biciruta-vercel.vercel.app/">BiciRuta</a></p>
+
+<p>En esta documentación llamada manual de desarrollo, están todos los hitos importantes para el levantamiento de la plataforma. Se comienza con herramientas utilizadas donde se mencionan todas los instrumentos necesarios para el funcionamiento de la página. Esta es la visión completa. 
 Posteriormente en las siguientes secciones (Google Cloud Platform , APIs Externas), se entra al detalle de las APIs y fuentes que se utilizaron para la conexión entre todo. 
-Luego en base de datos, se explica cómo se armó la información interna para poder darle la valoración base del producto
+Luego en base de datos, se explica cómo se armó la información interna para poder darle la valoración base del producto</p>
 
-Finalmente, en conexión, se muestra el deploy de la página como el prototipo, para terminar con todas las fuentes necesarias del proyecto.
+<p>Finalmente, en conexión, se muestra el deploy de la página como el prototipo, para terminar con todas las fuentes necesarias del proyecto.</p>
+
+<figure><img class="docimage" src="images/company_logo.png" alt="Jekyll" /><figcaption></figcaption></figure>
 
 <!-- ## Build the Theme -->
 
@@ -247,7 +243,10 @@ The two outputs available are `web` and `pdf`. (Even if you aren't publishing PD
 
 The YAML syntax depends on exact spacing, so make sure you follow the pattern shown in the sample sidebars. See my [YAML tutorial](mydoc_yaml_tutorial) for more details about how YAML works.
 
-{% include note.html content="If you have just one character of spacing off, Jekyll won't build due to the YAML syntax error. You'll see an error message in your console that says \"Error ... did not find expected key while parsing a block mapping at line 22 column 5. Error: Run jekyll build --trace for more information.\" If you encounter this, it usually refers to incorrect indentation or spacing in the YAML file. See the example mydoc_sidebar.yml file to see where your formatting went wrong." %}
+<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> If you have just one character of spacing off, Jekyll won't build due to the YAML syntax error. You'll see an error message in your console that says "Error ... did not find expected key while parsing a block mapping at line 22 column 5. Error: Run jekyll build --trace for more information." If you encounter this, it usually refers to incorrect indentation or spacing in the YAML file. See the example mydoc_sidebar.yml file to see where your formatting went wrong.</div>
+
+
+
 
 Each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level. If you need a hierarchy that has a folder that contains other folders and no loose topics, use a blank `-` item like this:
 
@@ -315,7 +314,7 @@ For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigatio
 
 ## Comments
 
-The theme integrates [Commento.io](https://commento.io/) for comments below pages and posts. (This commenting service doesn't inject controversial tracking ads like Disqus does.) You will need to Commento.io account + plan ($5/month) to authorize Commento with your domain (no other configuration should be required). If you don't want comments, in the \_config.yml file, change the `comments: true` properties (under `defaults`) to `comments: false` in every instance. Then in the commento.html include file (inside \_includes), the `{% raw %}{% unless page.comments == false %} ... {% endunless %}{% endraw %}` logic will not insert the Commentio form.
+The theme integrates [Commento.io](https://commento.io/) for comments below pages and posts. (This commenting service doesn't inject controversial tracking ads like Disqus does.) You will need to Commento.io account + plan ($5/month) to authorize Commento with your domain (no other configuration should be required). If you don't want comments, in the \_config.yml file, change the `comments: true` properties (under `defaults`) to `comments: false` in every instance. Then in the commento.html include file (inside \_includes), the `{% unless page.comments == false %} ... {% endunless %}` logic will not insert the Commentio form.
 
 ## Relative links and offline viewing
 
@@ -423,4 +422,4 @@ If you want to use an automated system for managing links, see [Automated Links]
 
 The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar. -->
 
-{% include links.html %}
+:ET
