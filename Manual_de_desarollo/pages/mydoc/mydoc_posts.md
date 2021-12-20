@@ -1,5 +1,5 @@
 ---
-title: Posts
+title: Shapes
 # tags: [getting_started, formatting, content_types]
 # keywords: posts, blog, news, authoring, exclusion, frontmatter
 # last_updated: Feb 25, 2016

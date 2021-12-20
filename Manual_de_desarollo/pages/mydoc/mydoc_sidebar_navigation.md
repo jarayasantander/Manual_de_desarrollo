@@ -1,5 +1,5 @@
 ---
-title: Sidebar Navigation
+title: Conexión
 # tags: [getting_started]
 # last_updated: July 3, 2016
 # keywords: sidebar, accordion, yaml, iteration, for loop, navigation, attributes, conditional filtering
